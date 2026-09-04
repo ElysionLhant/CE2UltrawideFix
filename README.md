@@ -45,6 +45,10 @@ A log is written to `CE2UltrawideFix.log` next to the exe every launch.
 
 Let's be honest: this game's assets are... budget-tier. If you have an RTX card, the community-leaked **DLSS 5 neural-rendering pass** dramatically improves perceived image quality here — a neural network re-renders the frame, smoothing faces, hair and cloth in particular.
 
+| Neural Rendering OFF (top) / ON (bottom) |
+|---|
+| ![DLSS 5 NR off/on comparison](docs/nr_compare.jpg) |
+
 - Tool: [DLSS5oneclick](https://github.com/faisalkindi/DLSS5oneclick) — point it at this game's exe and install (this game has no native DLSS, so it uses the Feeder path: ReShade + DLSS5-Feeder + LumeniteFX motion vectors).
 - In game: **Home** opens ReShade → Add-ons tab → "DLSS 5 Neural Rendering". **F6** toggles it, **F5** saves an ON/OFF screenshot pair.
 - Performance tip: `work_resolution` in `dlss5-feed.cfg` — 80 (percent) is a good sweet spot (internal ~1.25x upscale through DLSS at a fraction of the native cost).
