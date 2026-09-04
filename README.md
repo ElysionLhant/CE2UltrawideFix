@@ -13,9 +13,7 @@ A lightweight proxy-DLL patch that gives **The Caligula Effect 2** (UE 4.24, Epi
 1. **Pillarboxed image** — the game locks every camera to a 16:9 aspect ratio (`FMinimalViewInfo.bConstrainAspectRatio`), so on wide screens you only see a cropped strip. The patch clears that constraint at runtime; the camera then follows the real viewport aspect ratio.
 2. **Zoomed/cropped FOV** — the game forces `MaintainXFOV`, which shrinks the vertical FOV as the screen gets wider. The patch enforces `MaintainYFOV` (the engine default): vertical FOV stays exactly like 16:9, horizontal view expands naturally.
 
-Both fixes are **aspect-ratio agnostic** — they simply stop the game from overriding what the engine would do by default. At 16:9 the patch is a no-op visually. Resizing the window to any shape (e.g. a 21:9 window) works live:
-
-![21:9 window](docs/after_windowed_21x9.jpg)
+Both fixes are **aspect-ratio agnostic** — they simply stop the game from overriding what the engine would do by default. At 16:9 the patch is a no-op visually. Resizing the window to any shape (e.g. a 21:9 window) works live — verified at 3440x1440.
 
 ## Install
 
