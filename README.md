@@ -6,7 +6,7 @@ A lightweight proxy-DLL patch that gives **The Caligula Effect 2** (UE 4.24, Epi
 
 | Before (32:9, stock) | After (32:9, patched) |
 |---|---|
-| ![before](docs/before_title_pillarboxed.png) | ![after](docs/after_ingame_32x9.png) |
+| ![before](docs/before_title_pillarboxed.jpg) | ![after](docs/after_ingame_32x9.jpg) |
 
 ## What it fixes
 
@@ -15,7 +15,7 @@ A lightweight proxy-DLL patch that gives **The Caligula Effect 2** (UE 4.24, Epi
 
 Both fixes are **aspect-ratio agnostic** — they simply stop the game from overriding what the engine would do by default. At 16:9 the patch is a no-op visually. Resizing the window to any shape (e.g. a 21:9 window) works live:
 
-![21:9 window](docs/after_windowed_21x9.png)
+![21:9 window](docs/after_windowed_21x9.jpg)
 
 ## Install
 
