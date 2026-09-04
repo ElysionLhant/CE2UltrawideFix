@@ -41,6 +41,18 @@ EnableFOVFix=1
 
 A log is written to `CE2UltrawideFix.log` next to the exe every launch.
 
+## Recommended companion: DLSS 5 Neural Rendering
+
+Let's be honest: this game's assets are... budget-tier. If you have an RTX card, the community-leaked **DLSS 5 neural-rendering pass** dramatically improves perceived image quality here — a neural network re-renders the frame, smoothing faces, hair and cloth in particular.
+
+- Tool: [DLSS5oneclick](https://github.com/faisalkindi/DLSS5oneclick) — point it at this game's exe and install (this game has no native DLSS, so it uses the Feeder path: ReShade + DLSS5-Feeder + LumeniteFX motion vectors).
+- In game: **Home** opens ReShade → Add-ons tab → "DLSS 5 Neural Rendering". **F6** toggles it, **F5** saves an ON/OFF screenshot pair.
+- Performance tip: `work_resolution` in `dlss5-feed.cfg` — 80 (percent) is a good sweet spot (internal ~1.25x upscale through DLSS at a fraction of the native cost).
+- **Caveats**: the DLSS 5 add-on and its model are a *leaked, closed-source* NVIDIA build distributed by third parties — use at your own risk; RTX cards only. This game is offline/single-player with no anti-cheat, so no account risk.
+- Fully compatible with this patch — separate DLLs (ours: `X3DAudio1_7.dll`, theirs: `dxgi.dll`).
+
+This repository does not host any NVIDIA/DLSS files; the linked tool fetches them from their own sources at install time.
+
 ## Notes
 
 - Cinematic letterbox bars in cutscenes are removed too (the view simply fills).
@@ -89,6 +101,21 @@ MIT (this patch). The Caligula Effect 2 is © historia / NIS America — this pr
 ### 卸载
 
 删除 `X3DAudio1_7.dll`。游戏 exe 从未被修改——全部在内存中运行时补丁。
+
+### 推荐搭配：DLSS 5 神经渲染（NR）
+
+说实话，这游戏原生建模比较糙。如果你有 RTX 显卡，强烈推荐配上社区泄露的
+**DLSS 5 神经渲染**——神经网络会逐帧重绘画面，人物脸部、头发、布料观感提升明显。
+
+- 工具：[DLSS5oneclick](https://github.com/faisalkindi/DLSS5oneclick)，指向本游戏 exe 安装即可
+  （本游戏没有原生 DLSS，会走 Feeder 路线：ReShade + DLSS5-Feeder + LumeniteFX 运动矢量）。
+- 游戏内：**Home** 开 ReShade → Add-ons → "DLSS 5 Neural Rendering"；**F6** 开关，**F5** 存 ON/OFF 对比图。
+- 性能建议：`dlss5-feed.cfg` 里 `work_resolution=80` 是甜点（约 1.25 倍超分，开销远低于原生）。
+- **注意**：DLSS 5 插件和模型是泄露的闭源 NVIDIA 构建，第三方分发——风险自负；仅限 RTX。
+  本游戏单机无反作弊，无封号风险。
+- 与本补丁完全兼容（DLL 互不冲突：本补丁 `X3DAudio1_7.dll`，它们 `dxgi.dll`）。
+
+本仓库不托管任何 NVIDIA/DLSS 文件；上面的工具会在安装时从它自己的来源下载。
 
 ### 注意
 
